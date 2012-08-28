@@ -8,7 +8,7 @@ UIView-ExtraAttributes
 3. Include *UIView+ExtraAttributes.h* in your implementation file when you want to use the attributes.
 
 # Screenshot
-4 UIViews are placed at the corners of the blue UIView.  The blue UIView attributes are displayed.
+4 UIViews are placed at the corners of the blue UIView.  The blue UIView's attributes are displayed.
 ![Screenshot](http://farm9.staticflickr.com/8441/7882027386_02356992fd_b.jpg)
 
 # License
