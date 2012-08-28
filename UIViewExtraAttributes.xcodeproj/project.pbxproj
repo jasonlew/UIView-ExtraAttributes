@@ -15,6 +15,7 @@
 		73A1EF1415ECEE6F0067F4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A1EF1315ECEE6F0067F4F8 /* AppDelegate.m */; };
 		73A1EF1715ECEE700067F4F8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A1EF1515ECEE700067F4F8 /* MainStoryboard.storyboard */; };
 		73A1EF1A15ECEE700067F4F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A1EF1915ECEE700067F4F8 /* ViewController.m */; };
+		73A1EF2615ED2DF70067F4F8 /* UIView+ExtraAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A1EF2515ED2DF70067F4F8 /* UIView+ExtraAttributes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		73A1EF1615ECEE700067F4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		73A1EF1815ECEE700067F4F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		73A1EF1915ECEE700067F4F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		73A1EF2415ED2DF70067F4F8 /* UIView+ExtraAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtraAttributes.h"; sourceTree = "<group>"; };
+		73A1EF2515ED2DF70067F4F8 /* UIView+ExtraAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtraAttributes.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				73A1EF1515ECEE700067F4F8 /* MainStoryboard.storyboard */,
 				73A1EF1815ECEE700067F4F8 /* ViewController.h */,
 				73A1EF1915ECEE700067F4F8 /* ViewController.m */,
+				73A1EF2415ED2DF70067F4F8 /* UIView+ExtraAttributes.h */,
+				73A1EF2515ED2DF70067F4F8 /* UIView+ExtraAttributes.m */,
 				73A1EF0A15ECEE6F0067F4F8 /* Supporting Files */,
 			);
 			path = UIViewExtraAttributes;
@@ -164,6 +169,7 @@
 				73A1EF1015ECEE6F0067F4F8 /* main.m in Sources */,
 				73A1EF1415ECEE6F0067F4F8 /* AppDelegate.m in Sources */,
 				73A1EF1A15ECEE700067F4F8 /* ViewController.m in Sources */,
+				73A1EF2615ED2DF70067F4F8 /* UIView+ExtraAttributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +287,7 @@
 				73A1EF1F15ECEE700067F4F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
