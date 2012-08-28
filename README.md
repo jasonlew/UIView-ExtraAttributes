@@ -7,6 +7,9 @@ UIView-ExtraAttributes
 2. Add them to your Xcode project.
 3. Include *UIView+ExtraAttributes.h* in your implementation file when you want to use the attributes.
 
+# Screenshot
+![Screenshot](http://farm9.staticflickr.com/8441/7882027386_02356992fd_b.jpg)
+
 # License
 
 Copyright (c) 2012 Jason Lew
