@@ -16,6 +16,12 @@
 
 @implementation ViewController
 
+/**
+ * Override viewDidLoad
+ * Use to set up subviews for demo of UIView+ExtraAttributes category
+ *
+ * @author Jason Lew
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -67,12 +73,15 @@
     
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
+/**
+ * Only support portrait orientation
+ *
+ * @param interfaceOrientation The interface orientation in question
+ * 
+ * @author Jason Lew
+ *
+ * @return Whether the device should autorotate to this interface orientation
+ */
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return interfaceOrientation == UIInterfaceOrientationPortrait;
