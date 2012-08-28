@@ -1,6 +1,12 @@
 UIView-ExtraAttributes
 ======================
 
+# How to Use It
+
+1. Download the files *UIView+ExtraAttributes.h* and *UIView+ExtraAttributes.m*.
+2. Add them to your Xcode project.
+3. Include *UIView+ExtraAttributes.h* in your implementation file when you want to use the attributes.
+
 # License
 
 Copyright (c) 2012 Jason Lew
@@ -26,8 +32,3 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-# How to Use It
-
-1. Download the files *UIView+ExtraAttributes.h* and *UIView+ExtraAttributes.h*.
-2. Add them to your Xcode project.
-3. Include *UIView+ExtraAttributes.h* in your implementation file when you want to use the attributes.
