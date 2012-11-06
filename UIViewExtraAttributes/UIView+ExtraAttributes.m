@@ -149,4 +149,16 @@
     return self.frame.size.width;
 }
 
+/**
+ * The view's size
+ *
+ * @author Jason Lew
+ *
+ * @return The size
+ */
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
 @end

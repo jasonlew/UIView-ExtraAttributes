@@ -42,4 +42,6 @@
 @property (nonatomic, readonly) CGFloat height;
 @property (nonatomic, readonly) CGFloat width;
 
+@property (nonatomic, readonly) CGSize size;
+
 @end
