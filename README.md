@@ -9,7 +9,7 @@ UIView-ExtraAttributes
 
 # Example
 4 UIViews are placed at the corners of the blue UIView.  The blue UIView's attributes are displayed.
-![Screenshot](http://farm9.staticflickr.com/8441/7882027386_02356992fd_b.jpg)
+![Screenshot](https://raw.github.com/jasonlew/UIView-ExtraAttributes/master/screenshot.png)
 
 Here's the code:
 
