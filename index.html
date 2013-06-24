@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>UIView-ExtraAttributes by jasonlew</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>UIView-ExtraAttributes</h1>
+        <h2></h2>
+        <a href="https://github.com/jasonlew/UIView-ExtraAttributes" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="uiview-extraattributes" class="anchor" href="#uiview-extraattributes"><span class="octicon octicon-link"></span></a>UIView-ExtraAttributes</h1>
+
+<h1>
+<a name="how-to-use-it" class="anchor" href="#how-to-use-it"><span class="octicon octicon-link"></span></a>How to Use It</h1>
+
+<ol>
+<li>Download the files <em>UIView+ExtraAttributes.h</em> and <em>UIView+ExtraAttributes.m</em>.</li>
+<li>Add them to your Xcode project.</li>
+<li>Include <em>UIView+ExtraAttributes.h</em> in your implementation file when you want to use the attributes.</li>
+</ol><h1>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h1>
+
+<p>4 UIViews are placed at the corners of the blue UIView.  The blue UIView's attributes are displayed.
+<img src="https://raw.github.com/jasonlew/UIView-ExtraAttributes/master/screenshot.png" alt="Screenshot"></p>
+
+<p>Here's the code:</p>
+
+<div class="highlight"><pre><span class="n">UIView</span> <span class="o">*</span><span class="n">view0</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">leftSideX</span> <span class="o">+</span> <span class="mi">200</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">topSideY</span> <span class="o">+</span> <span class="mi">200</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">height</span><span class="o">/</span><span class="mi">4</span><span class="p">)];</span>
+<span class="n">NSLog</span><span class="p">(</span><span class="s">@"view0 frame: (%f, %f, %f, %f)"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
+<span class="n">view0</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="n">blueColor</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">view0</span><span class="p">];</span>
+
+<span class="c1">//translucent view originating at view0's top left corner</span>
+<span class="n">UIView</span> <span class="o">*</span><span class="n">view1</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">view0</span><span class="p">.</span><span class="n">topLeftCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topLeftCorner</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)];</span>
+<span class="n">view1</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="n">redColor</span><span class="p">]</span> <span class="n">colorWithAlphaComponent</span><span class="o">:</span><span class="mf">0.5</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">view1</span><span class="p">];</span>
+
+<span class="c1">//translucent view originating at view0's top right corner</span>
+<span class="n">UIView</span> <span class="o">*</span><span class="n">view2</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">view0</span><span class="p">.</span><span class="n">topRightCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topRightCorner</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)];</span>
+<span class="n">view2</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="n">purpleColor</span><span class="p">]</span> <span class="n">colorWithAlphaComponent</span><span class="o">:</span><span class="mf">0.5</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">view2</span><span class="p">];</span>
+
+<span class="c1">//translucent view originating at view0's bottom left corner</span>
+<span class="n">UIView</span> <span class="o">*</span><span class="n">view3</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">view0</span><span class="p">.</span><span class="n">bottomLeftCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomLeftCorner</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">75</span><span class="p">)];</span>
+<span class="n">view3</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="n">yellowColor</span><span class="p">]</span> <span class="n">colorWithAlphaComponent</span><span class="o">:</span><span class="mf">0.5</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">view3</span><span class="p">];</span>
+
+<span class="c1">//translucent view originating at view0's bottom right corner</span>
+<span class="n">UIView</span> <span class="o">*</span><span class="n">view4</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">view0</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)];</span>
+<span class="n">view4</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIColor</span> <span class="n">greenColor</span><span class="p">]</span> <span class="n">colorWithAlphaComponent</span><span class="o">:</span><span class="mf">0.5</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">view4</span><span class="p">];</span>
+
+<span class="c1">//display a textView with the attributes of view0</span>
+<span class="n">UITextView</span> <span class="o">*</span><span class="n">textView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITextView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="n">view4</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view4</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">)];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">topLeftCornerString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"topLeftCorner: (%f, %f)"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topLeftCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topLeftCorner</span><span class="p">.</span><span class="n">y</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">topRightCornerString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"topRightCorner: (%f, %f)"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topRightCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topRightCorner</span><span class="p">.</span><span class="n">y</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">bottomRightCornerString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"bottomRightCorner: (%f, %f)"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomRightCorner</span><span class="p">.</span><span class="n">y</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">bottomLeftCornerString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"bottomLeftCorner: (%f, %f)"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomLeftCorner</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomLeftCorner</span><span class="p">.</span><span class="n">y</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">topSideYString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"topSideY: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">topSideY</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">rightSideXString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"rightSideX: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">rightSideX</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">bottomSideYString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"bottomSideY: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">bottomSideY</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">leftSidexString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"leftSideX: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">leftSideX</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">widthString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"width: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">width</span><span class="p">];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">heightString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"height: %f"</span><span class="p">,</span> <span class="n">view0</span><span class="p">.</span><span class="n">height</span><span class="p">];</span>
+<span class="n">textView</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithFormat</span><span class="o">:</span><span class="s">@"Blue View Attributes:</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@</span><span class="se">\n</span><span class="s">%@"</span><span class="p">,</span>
+              <span class="n">topLeftCornerString</span><span class="p">,</span> <span class="n">topRightCornerString</span><span class="p">,</span> <span class="n">bottomRightCornerString</span><span class="p">,</span> <span class="n">bottomLeftCornerString</span><span class="p">,</span>
+              <span class="n">topSideYString</span><span class="p">,</span> <span class="n">rightSideXString</span><span class="p">,</span> <span class="n">bottomSideYString</span><span class="p">,</span> <span class="n">leftSidexString</span><span class="p">,</span>
+              <span class="n">widthString</span><span class="p">,</span> <span class="n">heightString</span><span class="p">];</span>
+<span class="n">textView</span><span class="p">.</span><span class="n">scrollEnabled</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">textView</span><span class="p">];</span>
+</pre></div>
+
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>Copyright (c) 2012 Jason Lew</p>
+
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/jasonlew/UIView-ExtraAttributes/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/jasonlew/UIView-ExtraAttributes/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/jasonlew/UIView-ExtraAttributes"></a> is maintained by <a href="https://github.com/jasonlew">jasonlew</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
