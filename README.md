@@ -1,13 +1,13 @@
 UIView-ExtraAttributes
 ======================
 
-# How to Use It
+## How to Use It
 
 1. Download the files *UIView+ExtraAttributes.h* and *UIView+ExtraAttributes.m*.
 2. Add them to your Xcode project.
 3. Include *UIView+ExtraAttributes.h* in your implementation file when you want to use the attributes.
 
-# Example
+## Example
 4 UIViews are placed at the corners of the blue UIView.  The blue UIView's attributes are displayed.
 ![Screenshot](https://raw.github.com/jasonlew/UIView-ExtraAttributes/master/screenshot.png)
 
