@@ -59,7 +59,7 @@ textView.scrollEnabled = NO;
 [self.view addSubview:textView];
 ```
 
-# License
+## License
 
 Copyright (c) 2012 Jason Lew
 
